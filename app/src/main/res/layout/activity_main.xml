@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topHorizontalLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomHorizontalLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <TextView
+        android:id="@+id/productTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:hint="@string/product_type"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintBottom_toTopOf="@id/topHorizontalLine"
+        app:layout_constraintEnd_toStartOf="@id/addQuantityTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+    <TextView
+        android:id="@+id/addQuantityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:hint="@string/add_quantity"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toEndOf="@id/productTypeTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertical"
+        app:layout_constraintBottom_toTopOf="@id/topHorizontalLine" />
+
+    <Button
+        android:id="@+id/buttonManager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:background="@drawable/rectangular_button"
+        android:text="@string/manager"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintBottom_toTopOf="@id/totalAmountTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/totalAmountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/total_amount"
+        android:textSize="@dimen/textSize"
+        android:layout_marginLeft="@dimen/fab_margin"
+        app:layout_constraintTop_toBottomOf="@id/buttonManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+        app:layout_constraintBottom_toTopOf="@+id/topHorizontalLine" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productTypeTextView"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangular_button"
+                android:text="@string/one"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangular_button"
+                android:text="@string/two"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangular_button"
+                android:text="@string/three"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+        </TableRow>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="2dp" />
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangular_button"
+                android:text="@string/four"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangular_button"
+                android:text="@string/five"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangular_button"
+                android:text="@string/six"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+        </TableRow>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="2dp" />
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangular_button"
+                android:text="@string/seven"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangular_button"
+                android:text="@string/eight"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangular_button"
+                android:text="@string/nine"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+        </TableRow>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="2dp" />
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangular_button"
+                android:text="@string/clear"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangular_button"
+                android:text="@string/zero"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+        </TableRow>
+
+    </TableLayout>
+    <Button
+        android:id="@+id/buttonBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:background="@drawable/rectangular_button"
+        android:text="@string/buy"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize"
+        android:layout_marginLeft="@dimen/margin"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@id/totalAmountTextView" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomHorizontalLine" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
